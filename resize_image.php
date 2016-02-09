@@ -104,7 +104,7 @@
     // check oversize
     if (!$oversize)
       if (
-        (($w !== null) && ($w > $old_width)) &&
+        (($w !== null) && ($w > $old_width)) ||
         (($h !== null) && ($h > $old_height))
       )
         return realpath($path);
