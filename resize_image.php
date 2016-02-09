@@ -142,7 +142,7 @@
       }
 
       if (($w !== null) && ($h !== null)) {
-        if ($w <= $h) {
+        if ($old_width >= $old_height) {
           $dst_width = $w;
           $dst_height = ceil($old_height * ($w / $old_width));
         } else {
