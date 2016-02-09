@@ -53,7 +53,3 @@ resize_image($path = '', $width = 0, $height = 0, $mode = 'contain', $oversize =
 ```
 <img src="<?=$src;?>">
 ```
-
-
-## Дополнительно
-Если у вас подключено расширение PHP - Imagick, то из фотографий автоматически будут вырезаться Meta-данные
