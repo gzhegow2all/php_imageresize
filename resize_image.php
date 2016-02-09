@@ -25,7 +25,7 @@ function resize_image($_path = null, $_w = null, $_h = null, $_mode = null, $_ov
 
   // check mode is allowed
   in_array($mode, array(
-    'cut',
+    'fill',
     'contain',
     'cover',
     'hard',
@@ -180,7 +180,7 @@ function resize_image($_path = null, $_w = null, $_h = null, $_mode = null, $_ov
   }
 
 
-  elseif (in_array($mode, array('cut'))) {
+  elseif (in_array($mode, array('cover'))) {
     $src_width = $old_width;
     $src_height = $old_height;
     if ($w >= $h) {
@@ -232,7 +232,7 @@ function resize_image($_path = null, $_w = null, $_h = null, $_mode = null, $_ov
   }
 
 
-  elseif (in_array($mode, array('cover'))) {
+  elseif (in_array($mode, array('fill'))) {
     $src_width = $old_width;
     $src_height = $old_height;
     if ($w <= $h) {
