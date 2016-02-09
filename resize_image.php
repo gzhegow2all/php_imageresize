@@ -1,4 +1,5 @@
 <?
+<?
 function resize_image($_path = null, $_w = null, $_h = null, $_mode = null, $_oversize = null) {
   // INIT
   defined('MAIN_DIR') || define('MAIN_DIR', dirname(__FILE__));
@@ -318,15 +319,6 @@ function resize_image($_path = null, $_w = null, $_h = null, $_mode = null, $_ov
   }
   else
     exit('[resize_image] Unknown $mode - ' . $mode);
-
-  // remove exif data
-  if (class_exists('Imagick')) {
-    $imagick = new Imagick($new_path);
-    $imagick->setCompression(imagick::COMPRESSION_JPEG);
-    $imagick->setCompressionQuality(100);
-    $imagick->stripImage();
-    $imagick->writeImage($new_path);
-  }
 
   return realpath($new_path);
 }
